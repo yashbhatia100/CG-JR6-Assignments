@@ -48,13 +48,13 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	}
 
 	void validateName(String name) {
-		if (name == null || name.isEmpty() || name.trim().isEmpty() || name.length()<10) {
+		if (name == null || name.isEmpty() || name.trim().isEmpty() || name.length()>10) {
 			throw new InvalidEmployeeNameExcpetion("name can't be null or empty");
 		}
 	}
 
 	void validateDepartment(String department) {
-		if (department == null || department.isEmpty() || department.trim().isEmpty() || department.length()<5) {
+		if (department == null || department.isEmpty() || department.trim().isEmpty() || department.length()>5) {
 			throw new InvalidDepartmentException("Department can't be null or empty");
 		}
 	}
