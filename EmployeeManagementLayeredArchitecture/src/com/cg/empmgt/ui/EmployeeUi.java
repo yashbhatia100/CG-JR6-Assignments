@@ -17,17 +17,17 @@ public class EmployeeUi {
 
 	void start() {
 		try {
-			Employee yash = service.addEmployee(0, "Yash ", "IT");
+			Employee yash = service.addEmployee("Yash ", "IT");
 			display(yash);
-			Employee yash1 = service.addEmployee(1, "Yash1", "HR");
+			Employee yash1 = service.addEmployee("Yash1", "HR");
 			display(yash1);
-			Employee yash2 = service.addEmployee(2, "Yash2", "IT");
+			Employee yash2 = service.addEmployee( "Yash2", "IT");
 			display(yash2);
 
 			System.out.println("******Printing by id****");
 			Employee fetchedEmployee = service.findById(yash1.getId());
 			display(fetchedEmployee);
-			service.removeById(1);
+			service.removeById(2);
 
 			System.out.println("**displaying all students***");
 			List<Employee> list = service.findAll();

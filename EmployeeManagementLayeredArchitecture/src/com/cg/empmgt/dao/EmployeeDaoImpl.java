@@ -5,12 +5,16 @@ import java.util.*;
 import com.cg.empmgt.entities.Employee;
 
 public class EmployeeDaoImpl implements IEmployeeDao {
-	
+	private int generateId;
+	public int generateId() {
+	 generateId++;
+		return generateId;
+	}
 
 	@Override
 	public void addEmployee(Employee employee) {
 		Map<Integer, Employee> empStore = EmployeeStore.empStore;
-		int id=employee.getId();
+		int id=generateId();
 		employee.setId(id);
 		empStore.put(id, employee);
 

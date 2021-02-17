@@ -6,11 +6,10 @@ private	int id;
 	private String department;
 
 	public Employee() {
-		this(0,"not given", "not given");
+		this("not given", "not given");
 	}
 
-	public Employee(int id ,String name, String department) {
-		this.id=id;
+	public Employee(String name, String department) {
 		this.name = name;
 		this.department = department;
 
